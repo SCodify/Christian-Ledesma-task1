@@ -28,7 +28,6 @@
 .a-imgItem_logo {
     width: 100px;    
     display: block;
-    margin-top: 68px 40px 0 20px;
     position: absolute;
     top: 319px;
     right: 5%;
@@ -58,12 +57,12 @@
     margin: 0 0 42px 20px;
 }
 
-.--active {
+.active {
     text-decoration: none;
     color: black;
 }
 
-.--active:visited {
+.active:visited {
     text-decoration: none;
     color: black;
 }
@@ -82,12 +81,13 @@
 
 .a-text_taxtMainSection {
     margin-bottom: 20px;
+    padding-right: 10%;
 }
 
-.--indent {
+.indent {
     text-indent: 20px;
 }
 
 .a-anchor_linkMail {
-    text-decoration: none;
+    text-decoration-color: black;
 }
