@@ -52,7 +52,6 @@ h2, h3, h4 {
     width: 100%;
     display: flex;
     justify-content: flex-end;
-
     top: 0;
     right: 0;
 }
@@ -110,12 +109,7 @@ h2, h3, h4 {
     box-shadow: var(--shadow);
     border-radius: 15px;
     padding: 20px;
-    margin: 50px 15%;
-    transition: all 0.2s ease;
-}
-
-.m-article_articleMainSection:hover {
-    transform: scale(1.02);
+    margin: 50px 15%; 
 }
 
 .m-article_articleMainSection h2,
@@ -152,6 +146,10 @@ h2, h3, h4 {
     padding-bottom: 20px;
 }
 
+.mt {
+    margin-top: 20px;
+}
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -180,14 +178,25 @@ td{
 }
 
 /* Estilos de las listas */
-ol{
-    list-style-position: inside;
+
+dl{
+    margin-bottom: 40px;
 }
 
-.letras {
+ol{
+    list-style-position: inside;
+    margin-bottom: 40px;
+}
+
+strong {
+    margin-top: 20px;
+}
+
+ol.letras {
     list-style:lower-alpha;
     list-style-position: inside;
 }
+
 
 ul li:first-child {
     list-style-type: none;
