@@ -33,7 +33,7 @@ h2, h3, h4 {
 }
 
 .a-img_imageHeader {
-    filter: brightness(70%);
+    filter: brightness(65%);
     width: 100%;
     margin-top: 49px;
     height: calc(80vh - 49px);
@@ -82,7 +82,7 @@ h2, h3, h4 {
 
 .a-imgItem_logo {
     background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 35% 35% 35% 5%;
+    border-radius: 35%;
     width: 200px;
     padding: 20px;
     margin: 20px;
@@ -157,10 +157,17 @@ h2, h3, h4 {
 
 /* Estilos de la tabla */
 
+.tableContainer {
+    overflow-x: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
 .o-table_tableSchedule{
     margin: 40px 0px;
-    width: 100%;
     border-collapse: collapse;
+    width: 100%;
 }
 
 thead tr {
@@ -207,4 +214,82 @@ ul li:last-child {
     list-style-position: inside;
     list-style-type: circle;
     padding-left: 40px;
+}
+
+/* Estilos del formulario */
+
+form h3{
+    margin-top: 30px;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+label {
+    white-space: nowrap;
+}
+
+input {
+    margin: 10px 0;
+}
+
+#fname,
+#lname,
+#st_addr,
+#city,
+#zcode {
+    width: 100%;
+}
+
+.jc-felx-start {
+    justify-content:flex-start;
+}
+
+.container-inputs:first-child{
+    white-space: nowrap;
+    padding-right: 20px;
+}
+
+.submit_button{
+    background-color: var(--dark-color);
+    color: var(--light-color1);
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.submit_button:hover {
+    background-color: var(--yellow-color);
+    color: var(--dark-color);
+    outline: 1px solid var(--dark-color);
+}
+
+[type="text"], 
+[type="number"], 
+[type="date"] {
+    border: none;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+[type="text"]:hover, 
+[type="number"]:hover, 
+[type="date"]:hover {
+    border: none;
+    border-bottom: 1px solid var(--yellow-color);
+}
+
+[type="text"]:focus-visible, 
+[type="number"]:focus-visible, 
+[type="date"]:focus-visible {
+    outline: none;
+    border: none;
+    background-color: var(--light-color1);
+    border-bottom: 1px solid var(--yellow-color);
 }

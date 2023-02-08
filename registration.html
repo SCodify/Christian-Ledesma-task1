@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="./assets/LogoMightyDucks-01.png" type="image/x-icon">
+    <!-- GOOGLE FONTS -->
+        <!-- Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- HOJAS DE ESTILO -->
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <header class="o-header_headerContainer">
+        <h1 class="a-title_mainTitle">Mighty Ducks Hockey League</h1>
+        <figure class="m-imgContainer_imgageaHeaderContainer">
+            <img class="a-img_imageHeader" src="./assets/design1_image1.jpg" alt="">
+        </figure>
+        <figure class="m-imgContainer_logo" >
+            <img class="a-imgItem_logo" src="./assets/LogoMightyDucks-01.png" alt="Logo Mighty Ducks Hockey League">
+        </figure>
+    </header>
+    <nav class="o-nav_menu">
+        <a class="a-anchor_navItem" href="index.html">Home</a>
+        <a class="a-anchor_navItem" href="./game_info.html">Game Schedule</a>
+        <a class="a-anchor_navItem" href="./rules.html">Play Rules & Policies</a>
+        <a class="a-anchor_navItem active" href="./#">Registration</a>
+        <a class="a-anchor_navItem" href="./about.html">About MDHL</a>
+        <a class="a-anchor_navItem" href="./contact.html">Contact</a>
+    </nav>
+    <section class="o-section_mainSectionConteiner">
+        <h2 class="a-title_titleMainSection">Registration Form</h2>
+        <div class="m-article_articleMainSection">
+            <form action="./show_data.html" method="get">
+                <fieldset>
+                    <label for="fname">Player's First Name: </label>
+                    <input required type="text" name="fisrt_name" id="fname" placeholder="John">
+                    
+                    <label for="lname">Last Name:</label>
+                    <input required type="text" name="fisrt_name" id="lname" placeholder="Smith">
+                </fieldset>
+                <fieldset>
+                    <label for="st_addr">Street address: </label>
+                    <input required type="text" name="street_address" id="st_addr">
+                </fieldset>
+                <fieldset>
+                    <label for="city">City: </label>
+                    <input required type="text" name="city" id="city">
+
+                    <label for="zcode">Zip code: </label>
+                    <input required type="number" name="zip_code" id="zcode">
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <label for="birthdate">Birth Date (mm/dd/yyyy): </label>
+                    <input required type="date" name="birth_date" id="birthdate">
+
+                    <p>Gender:  
+                        <input required type="radio" name="gender" id="female" value="female">
+                        <label for="female">female</label>
+                        <input required type="radio" name="gender" id="male" value="male">
+                        <label for="male">male </label>
+                    </p>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <p>
+                        Grade:
+                        <input required type="radio" name="grade" id="pre-school" value="pre-school">
+                        <label for="pre-school">Pre-scrool</label>
+                        <input required type="radio" name="grade" id="1st" value="1st">
+                        <label for="1st"><sup>1st</sup></label>
+                        <input required type="radio" name="grade" id="2st" value="2st">    
+                        <label for="2st"><sup>2st</sup></label>
+                        <input required type="radio" name="grade" id="3st" value="3st">    
+                        <label for="3st"><sup>3st</sup></label>
+                        <input required type="radio" name="grade" id="4st" value="4st">    
+                        <label for="4st"><sup>4st</sup></label>
+                        <input required type="radio" name="grade" id="5st" value="5st">    
+                        <label for="5st"><sup>5st</sup></label>
+                    </p>
+                </fieldset>
+                
+                <h3>Which elementary school do you live near?</h3>
+                <h4>Closest school:</h4>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school1" value="AJ Katzenmaier">
+                        <label for="closest_school1">AJ Katzenmaier</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school2" value="Marjorie P Hart">
+                        <label for="closest_school2">Marjorie P Hart</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school3" value="Greenday">
+                        <label for="closest_school3">Greenday</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school4" value="North Elementary">
+                        <label for="closest_school4">North Elementary</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school5" value="Howard A Yeager">
+                        <label for="closest_school5">Howard A Yeager</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="closest_school" id="closest_school6" value="South Elementary">
+                        <label for="closest_school6">South Elementary</label>
+                    </div>
+                </fieldset>
+            
+                <h3>What position(s) do you normally play? (check all that apply)</h3>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input type="checkbox" name="position" id="position1" value="Forward">
+                        <label for="position1">Forward</label>
+                    </div>
+                    <div class="container-inp">
+                        <input type="checkbox" name="position" id="position2" value="Midfield">
+                        <label for="position2">Midfield</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input type="checkbox" name="position" id="position3" value="Defense">
+                        <label for="position3">Defense</label>
+                    </div>
+                    <div class="container-inp">
+                        <input type="checkbox" name="position" id="position4" value="Goalkeeper">
+                        <label for="position4">Goalkeeper</label>
+                    </div>
+                </fieldset>
+
+                <h3>Uniform size:</h3>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size1" value="Youth small">
+                        <label for="size1">Youth small</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size2" value="Medium">
+                        <label for="size2">Medium</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size3" value="Youth medium">
+                        <label for="size3">Youth medium</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size4" value="Large">
+                        <label for="size4">Large</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size5" value="Youth large">
+                        <label for="size5">Youth large</label>
+                    </div>
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size6" value="Extra large">
+                        <label for="size6">Extra large</label>
+                    </div>
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <div class="container-inp">
+                        <input required type="radio" name="size" id="size7" value="Small">
+                        <label for="size7">Small</label>
+                    </div>
+                </fieldset>
+
+                <h4 class="mt">Permission to play</h4>
+
+                <p>I, the parent or guardian of the minor registrant, agree that the registrant and i will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated with hokey and in consideration for the "League" accepting the registrant for its hokey programs and activities, i hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, including the facilities used for registrant's participation in the programand/orbeing transported to or from MDHL sponsored activities, which transportation.</p>
+                <p>By signing below, i here by agree and authorize the above. In addition, by entering your name below, i also acknowledge that i have read the cancellation policy and agree to its terms.</p>
+
+                <fieldset class="jc-felx-start">
+                    <label for="parent-guardian_signature">Parent/guardian signature</label>
+                    <input required type="text" name="parent-guardian_signature" id="parent-guardian_signature">
+                </fieldset>
+                <fieldset class="jc-felx-start">
+                    <label for="date_permission">Date</label>
+                    <input required type="date" name="date_permission" id="date_permission">
+                </fieldset>
+                <div class="center">
+                    <button class="submit_button mt" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>    
+    <footer>
+
+    </footer>
+</body>
+</html>
