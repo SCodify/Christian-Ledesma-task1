@@ -6,6 +6,10 @@
     /* outline: 1px solid red; */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 :root {
     --dark-color: #211915ff;
     --light-color1: #ece9e4;
@@ -24,12 +28,14 @@ h2, h3, h4 {
 }
 
 .a-title_mainTitle{
-    z-index: 1;
+    z-index: 11;
     padding: 5px 15px;
     background-color: var(--yellow-color);
     color: var(--dark-color);
     display: flex;
-    position: fixed;
+    height: 49px;
+    align-items: center;
+    margin-right: auto;
 }
 
 .a-img_imageHeader {
@@ -54,6 +60,11 @@ h2, h3, h4 {
     justify-content: flex-end;
     top: 0;
     right: 0;
+}
+
+.m-navItems-container {
+    display: flex;
+    background-color: var(--dark-color);
 }
 
 .a-anchor_navItem {
@@ -103,7 +114,8 @@ h2, h3, h4 {
     padding: 15px 20px;
 }
 
-.m-article_articleMainSection {
+.m-article_articleMainSection, 
+.m-article_articleMapSection {
     background-color: var(--light-color2);
     color: var(--dark-color);
     box-shadow: var(--shadow);
@@ -113,13 +125,25 @@ h2, h3, h4 {
 }
 
 .m-article_articleMainSection h2,
-.m-article_articleMainSection h3 {
+.m-article_articleMainSection h3, 
+.m-article_articleMapSection h2, 
+.m-article_articleMapSection h3 {
     border-width: 3px;
     border-style: solid;
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-image: var(--border-gradient);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--dark-color);
+    background-color: var(--yellow-color);
+    padding: 20px 0;
+
 }
 
 .center{
@@ -183,6 +207,8 @@ th {
 td{
     padding: 10px;
     border-bottom: 1px solid black;
+    white-space:nowrap; 
+    vertical-align:top;
 }
 
 /* Estilos de las listas */
@@ -255,7 +281,11 @@ input {
     padding-right: 20px;
 }
 
-.submit_button{
+.permission-text {
+    font-family: monospace;
+}
+
+.btn{
     background-color: var(--dark-color);
     color: var(--light-color1);
     padding: 10px;
@@ -265,7 +295,7 @@ input {
     transition: all 0.2s ease-in;
 }
 
-.submit_button:hover {
+.btn:hover {
     background-color: var(--yellow-color);
     color: var(--dark-color);
     outline: 1px solid var(--dark-color);
@@ -292,4 +322,134 @@ input {
     border: none;
     background-color: var(--light-color1);
     border-bottom: 1px solid var(--yellow-color);
+}
+
+select{
+    background-color: var(--light-color2);
+    border: none;
+    border-bottom: 1px solid var(--dark-color);
+}
+
+
+select:focus-visible {
+    border: none;
+    outline: 1px solid var(--yellow-color);
+    background-color: var(--light-color1);
+}
+
+/* Estilo de los mapas */
+
+iframe {
+    width: 100%;
+    border-radius: 10px;
+    outline: 2px solid var(--light-color1);
+    transition: all 0.5s ease;
+}
+
+.anchor_schedules {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.anchor_schedules:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+@media screen and (max-width: 955px) { 
+    .m-navItems-container{
+        width: 100%;
+        position: absolute;
+        top: 49px;
+        left: 100%;
+        flex-direction: column;
+        background-color: var(--dark-color);
+        transform: translateX(0);
+        transition: .6s;
+    }
+
+    nav .navbar-toggle{
+        display: grid !important;
+    }
+
+}
+
+
+nav .navbar-toggle{
+    display: none;
+    height: min-content;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+}
+
+nav .navbar-toggle .bar{
+    width: 30px;
+    height: 3px;
+    margin-bottom: 10px;
+    background-color: var(--yellow-color);
+    border-radius: 10%;
+    transition: .4s;
+}
+
+#toggle {
+    display: none;
+}
+
+
+#toggle:checked ~ nav .m-navItems-container {
+    transform: translateX(-100%);
+}
+
+#toggle:checked ~ nav .navbar-toggle {
+    margin-top: 22px;
+}
+
+#toggle:checked ~ nav .navbar-toggle .bar:nth-child(1) {
+    position: absolute;
+    transform: rotate(45deg);
+}
+
+
+#toggle:checked ~ nav .navbar-toggle .bar:nth-child(2) {
+    display: none;
+}
+
+#toggle:checked ~ nav .navbar-toggle .bar:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 855px) { 
+    .m-article_articleMainSection, 
+    .m-article_articleMapSection {
+        border-radius: 0px;
+        padding: 20px;
+        margin: 50px 0; 
+    }
+}
+
+@media screen and (max-width: 597px) { 
+    fieldset {
+        flex-direction: column;
+        gap: 0px;
+        align-items: start;
+    }
+
+    [type="text"], 
+    [type="number"], 
+    [type="date"] {
+        margin-bottom: 40px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .grade-radios{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
 }

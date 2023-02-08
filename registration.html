@@ -17,7 +17,6 @@
 </head>
 <body>
     <header class="o-header_headerContainer">
-        <h1 class="a-title_mainTitle">Mighty Ducks Hockey League</h1>
         <figure class="m-imgContainer_imgageaHeaderContainer">
             <img class="a-img_imageHeader" src="./assets/design1_image1.jpg" alt="">
         </figure>
@@ -25,18 +24,27 @@
             <img class="a-imgItem_logo" src="./assets/LogoMightyDucks-01.png" alt="Logo Mighty Ducks Hockey League">
         </figure>
     </header>
+    <input type="checkbox" id="toggle">
     <nav class="o-nav_menu">
-        <a class="a-anchor_navItem" href="index.html">Home</a>
-        <a class="a-anchor_navItem" href="./game_info.html">Game Schedule</a>
-        <a class="a-anchor_navItem" href="./rules.html">Play Rules & Policies</a>
-        <a class="a-anchor_navItem active" href="./#">Registration</a>
-        <a class="a-anchor_navItem" href="./about.html">About MDHL</a>
-        <a class="a-anchor_navItem" href="./contact.html">Contact</a>
+        <h1 class="a-title_mainTitle">MDHL</h1>
+        <label class="navbar-toggle" for="toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </label>
+        <div class="m-navItems-container">
+            <a class="a-anchor_navItem" href="./index.html">Home</a>
+            <a class="a-anchor_navItem" href="./game_info.html">Game Schedule</a>
+            <a class="a-anchor_navItem" href="./rules.html">Play Rules & Policies</a>
+            <a class="a-anchor_navItem active" href="#">Registration</a>
+            <a class="a-anchor_navItem" href="./about.html">About MDHL</a>
+            <a class="a-anchor_navItem" href="./contact.html">Contact</a>
+        </div>
     </nav>
     <section class="o-section_mainSectionConteiner">
         <h2 class="a-title_titleMainSection">Registration Form</h2>
         <div class="m-article_articleMainSection">
-            <form action="./show_data.html" method="get">
+            <form action="./show_data.html" method="get" target="_blank">
                 <fieldset>
                     <label for="fname">Player's First Name: </label>
                     <input required type="text" name="fisrt_name" id="fname" placeholder="John">
@@ -67,54 +75,47 @@
                     </p>
                 </fieldset>
                 <fieldset class="jc-felx-start">
-                    <p>
+                    <p class="grade-radios">
                         Grade:
-                        <input required type="radio" name="grade" id="pre-school" value="pre-school">
-                        <label for="pre-school">Pre-scrool</label>
-                        <input required type="radio" name="grade" id="1st" value="1st">
-                        <label for="1st"><sup>1st</sup></label>
-                        <input required type="radio" name="grade" id="2st" value="2st">    
-                        <label for="2st"><sup>2st</sup></label>
-                        <input required type="radio" name="grade" id="3st" value="3st">    
-                        <label for="3st"><sup>3st</sup></label>
-                        <input required type="radio" name="grade" id="4st" value="4st">    
-                        <label for="4st"><sup>4st</sup></label>
-                        <input required type="radio" name="grade" id="5st" value="5st">    
-                        <label for="5st"><sup>5st</sup></label>
+                        <label for="pre-school">
+                            <input required type="radio" name="grade" id="pre-school" value="pre-school">
+                        Pre-scrool</label>
+                        <label for="1st">
+                            <input required type="radio" name="grade" id="1st" value="1st">
+                            <sup>1st</sup>
+                        </label>
+                        <label for="2st">
+                            <input required type="radio" name="grade" id="2st" value="2st">    
+                            <sup>2st</sup>
+                        </label>
+                        <label for="3st">
+                            <input required type="radio" name="grade" id="3st" value="3st">    
+                            <sup>3st</sup>
+                        </label>
+                        <label for="4st">
+                            <input required type="radio" name="grade" id="4st" value="4st">    
+                            <sup>4st</sup>
+                        </label>
+                        <label for="5st">
+                            <input required type="radio" name="grade" id="5st" value="5st">    
+                            <sup>5st</sup>
+                        </label>
                     </p>
                 </fieldset>
                 
                 <h3>Which elementary school do you live near?</h3>
-                <h4>Closest school:</h4>
                 <fieldset class="jc-felx-start">
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school1" value="AJ Katzenmaier">
-                        <label for="closest_school1">AJ Katzenmaier</label>
-                    </div>
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school2" value="Marjorie P Hart">
-                        <label for="closest_school2">Marjorie P Hart</label>
-                    </div>
-                </fieldset>
-                <fieldset class="jc-felx-start">
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school3" value="Greenday">
-                        <label for="closest_school3">Greenday</label>
-                    </div>
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school4" value="North Elementary">
-                        <label for="closest_school4">North Elementary</label>
-                    </div>
-                </fieldset>
-                <fieldset class="jc-felx-start">
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school5" value="Howard A Yeager">
-                        <label for="closest_school5">Howard A Yeager</label>
-                    </div>
-                    <div class="container-inp">
-                        <input required type="radio" name="closest_school" id="closest_school6" value="South Elementary">
-                        <label for="closest_school6">South Elementary</label>
-                    </div>
+                    <label for="closest_school">Closest school:
+                        <select name="closest_school" id="closest_school" required>
+                            <option disabled selected value="">select a school</option>
+                            <option value="AJ Katzenmaier">AJ Katzenmaier</option>
+                            <option value="Marjorie P Hart">Marjorie P Hart</option>
+                            <option value="Greenday">Greenday</option>
+                            <option value="North Elementary">North Elementary</option>
+                            <option value="Howard A Yeager">Howard A Yeager</option>
+                            <option value="South Elementary">South Elementary</option>
+                        </select>
+                    </label>
                 </fieldset>
             
                 <h3>What position(s) do you normally play? (check all that apply)</h3>
@@ -177,27 +178,26 @@
                     </div>
                 </fieldset>
 
-                <h4 class="mt">Permission to play</h4>
+                <h4 class="mt"><em class="permission-text">Permission to play</em></h4>
+                <p class="permission-text">I, the parent or guardian of the minor registrant, agree that the registrant and i will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated with hokey and in consideration for the "League" accepting the registrant for its hokey programs and activities, i hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, including the facilities used for registrant's participation in the programand/orbeing transported to or from MDHL sponsored activities, which transportation.</p>
+                <p class="permission-text">By signing below, i here by agree and authorize the above. In addition, by entering your name below, i also acknowledge that i have read the cancellation policy and agree to its terms.</p>
 
-                <p>I, the parent or guardian of the minor registrant, agree that the registrant and i will abide by all the rules of the Mighty Ducks Hockey League (MDHL). In recognizing the possibility of physical injury associated with hokey and in consideration for the "League" accepting the registrant for its hokey programs and activities, i hereby release, discharge, and/or otherwise indemnify MDHL, their employees and associated personnel and volunteers, including the facilities used for registrant's participation in the programand/orbeing transported to or from MDHL sponsored activities, which transportation.</p>
-                <p>By signing below, i here by agree and authorize the above. In addition, by entering your name below, i also acknowledge that i have read the cancellation policy and agree to its terms.</p>
-
-                <fieldset class="jc-felx-start">
-                    <label for="parent-guardian_signature">Parent/guardian signature</label>
+                <fieldset class="jc-felx-start mt">
+                    <label class="permission-text" for="parent-guardian_signature">Parent/guardian signature</label>
                     <input required type="text" name="parent-guardian_signature" id="parent-guardian_signature">
                 </fieldset>
                 <fieldset class="jc-felx-start">
-                    <label for="date_permission">Date</label>
+                    <label class="permission-text" for="date_permission">Date</label>
                     <input required type="date" name="date_permission" id="date_permission">
                 </fieldset>
                 <div class="center">
-                    <button class="submit_button mt" type="submit">Submit</button>
+                    <button class="btn mt" type="submit">Submit Form</button>
                 </div>
             </form>
         </div>
     </section>    
     <footer>
-
+        <h6>Mighty Ducks Hockey League</h6>
     </footer>
 </body>
 </html>
