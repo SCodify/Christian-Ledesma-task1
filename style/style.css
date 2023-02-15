@@ -3,7 +3,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* outline: 1px solid red; */
 }
 
 html {
@@ -179,8 +178,6 @@ footer {
     justify-content: space-between;
 }
 
-/* Estilos de la tabla */
-
 .tableContainer {
     overflow-x: auto;
     display: flex;
@@ -211,8 +208,6 @@ td{
     vertical-align:top;
 }
 
-/* Estilos de las listas */
-
 dl{
     margin-bottom: 40px;
 }
@@ -240,8 +235,6 @@ ul .circle {
     list-style-type: circle;
     padding-left: 40px;
 }
-
-/* Estilos del formulario */
 
 form h3{
     margin-top: 30px;
@@ -336,8 +329,6 @@ select:focus-visible {
     background-color: var(--light-color1);
 }
 
-/* Estilo de los mapas */
-
 iframe {
     width: 100%;
     border-radius: 10px;
@@ -372,7 +363,6 @@ iframe {
     nav .navbar-toggle{
         display: grid !important;
     }
-
 }
 
 
@@ -450,5 +440,4 @@ nav .navbar-toggle .bar{
         display: flex;
         flex-direction: column;
     }
-    
 }
