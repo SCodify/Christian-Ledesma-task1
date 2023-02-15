@@ -231,12 +231,11 @@ ol.alpha {
     list-style-position: inside;
 }
 
-
-ul li:first-child {
+ul li {
     list-style-type: none;
 }
 
-ul li:last-child {
+ul .circle {
     list-style-position: inside;
     list-style-type: circle;
     padding-left: 40px;
